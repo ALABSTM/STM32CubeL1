@@ -1,6 +1,7 @@
 # STM32CubeL1 MCU Firmware Package
 
 ![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/STM32CubeL1.svg?color=brightgreen)
+![compilation](https://github.com/ALABSTM/STM32CubeL1/actions/workflows/ci.yml/badge.svg)
 
 **STM32Cube** is an STMicroelectronics original initiative to ease the developers life by reducing efforts, time and cost.
 

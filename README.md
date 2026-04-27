@@ -1,6 +1,6 @@
 # STM32CubeL1 MCU Firmware Package
 
-![tag](https://img.shields.io/badge/tag-v1.10.2-brightgreen.svg)
+![tag](https://img.shields.io/badge/tag-v1.10.2-blue.svg)
 [![release note](https://img.shields.io/badge/release_note-view_html-gold.svg)](https://htmlpreview.github.io/?https://github.com/ALABSTM/STM32CubeL1/blob/master/Release_Notes.html)
 [![offer](https://img.shields.io/badge/stm32cube_mcu_offer-browse-orange.svg)](https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer)
 ![compilation](https://github.com/ALABSTM/STM32CubeL1/actions/workflows/ci.yml/badge.svg?event=push)

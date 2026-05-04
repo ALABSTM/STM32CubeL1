@@ -43,12 +43,13 @@ jobs:
       - name: Check artistic style
         id: astyle
         uses: ALABSTM/actions/astyle@main
-        # with:
-          # astyle-definition: '.github/workflows/astyle_formatting_option/.astylerc'
-          # ignore-path-list: '.github/workflows/astyle_formatting_option/.astyleignore'
+        with:
+          root-src-path: '.'
+          # ignore-path-list: '???/astyle_formatting_option/.astyleignore'
+          # astyle-definition: '???/astyle_formatting_option/.astylerc'
 
       # Use the output from the "astyle" step.
-      - name: Errors
+      - name: Log
         if: failure()
         run: |
           cat ${{ steps.astyle.outputs.astyle-result }}

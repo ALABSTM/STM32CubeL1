@@ -29,3 +29,27 @@ jobs:
         run: |
           cat ${{ steps.compile.outputs.compile-result }}
           exit 1
+
+  astyle_check:
+    runs-on: ubuntu-latest
+    name: Artistic Style
+    steps:
+      # Clone the repository using the "checkout" GH action.
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      # Check the source files are compliant with the artistic style using the "astyle" user-defined action.
+      - name: Check artistic style
+        id: astyle
+        uses: ALABSTM/actions/astyle@main
+        # with:
+          # astyle-definition: '.github/workflows/astyle_formatting_option/.astylerc'
+          # ignore-path-list: '.github/workflows/astyle_formatting_option/.astyleignore'
+
+      # Use the output from the "astyle" step.
+      - name: Errors
+        if: failure()
+        run: |
+          cat ${{ steps.astyle.outputs.astyle-result }}
+          exit 1

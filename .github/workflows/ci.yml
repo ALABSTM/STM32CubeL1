@@ -38,7 +38,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         with:
-          fetch-depth: 0
+          fetch-depth: 2
       # Check the source files are compliant with the artistic style using the "astyle" user-defined action.
       - name: Check artistic style
         id: astyle

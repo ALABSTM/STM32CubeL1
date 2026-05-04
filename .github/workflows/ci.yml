@@ -43,8 +43,8 @@ jobs:
       - name: Check artistic style
         id: astyle
         uses: ALABSTM/actions/astyle@main
-        with:
-          root-src-path: ${{ github.workspace }}
+        # with:
+          # root-src-path: ${{ github.workspace }}
           # ignore-path-list: '???/astyle_formatting_option/.astyleignore'
           # astyle-definition: '???/astyle_formatting_option/.astylerc'
 

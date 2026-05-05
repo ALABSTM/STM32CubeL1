@@ -50,7 +50,7 @@ jobs:
         id: astyle
         uses: ALABSTM/actions/astyle@main
         with:
-          source-root-path: ${{ github.workspace }}
+          source-root-path: ''
           # ignore-path-list: 'astyle_formatting_option/.astyleignore'
           # astyle-definition: 'astyle_formatting_option/.astylerc'
 

@@ -52,7 +52,7 @@ jobs:
         id: astyle
         uses: ALABSTM/actions/astyle@main
         with:
-          source-root-path: ''
+          source-root-path: ${{ github.workspace }}
           ignore-path-list: ''
           astyle-definition: ''
 

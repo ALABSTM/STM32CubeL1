@@ -42,6 +42,8 @@ jobs:
       # List the workspace content for debug purpose.
       - name: Debug workspace
         run: |
+          echo "-------------------------------------"
+          echo "## From YML file..."
           pwd
           echo "$GITHUB_WORKSPACE"
           ls -la

@@ -51,8 +51,8 @@ jobs:
         uses: ALABSTM/actions/astyle@main
         with:
           source-root-path: ''
-          # ignore-path-list: 'astyle_formatting_option/.astyleignore'
-          # astyle-definition: 'astyle_formatting_option/.astylerc'
+          ignore-path-list: ''
+          astyle-definition: ''
 
       # Use the output from the "astyle" step.
       - name: Log

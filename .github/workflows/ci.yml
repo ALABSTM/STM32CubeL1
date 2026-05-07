@@ -39,14 +39,6 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 2
-      # List the workspace content for debug purpose.
-      - name: Debug workspace
-        run: |
-          echo "-------------------------------------"
-          echo "## From YML file..."
-          pwd
-          echo "$GITHUB_WORKSPACE"
-          ls -la
       # Check the source files are compliant with the artistic style using the "astyle" user-defined action.
       - name: Check artistic style
         id: astyle

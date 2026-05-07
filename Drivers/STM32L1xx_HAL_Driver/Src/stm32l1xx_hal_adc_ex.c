@@ -110,13 +110,13 @@
   */
 HAL_StatusTypeDef HAL_ADCEx_InjectedStart(ADC_HandleTypeDef* hadc)
 {
-  HAL_StatusTypeDef tmp_hal_status = HAL_OK;
+  HAL_StatusTypeDef tmp_hal_status = HAL_OK;                  
   
   /* Check the parameters */
   assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
   
   /* Process locked */
-  __HAL_LOCK(hadc);
+  __HAL_LOCK(   hadc);
     
   /* Enable the ADC peripheral */
   tmp_hal_status = ADC_Enable(hadc);
@@ -135,11 +135,11 @@ HAL_StatusTypeDef HAL_ADCEx_InjectedStart(ADC_HandleTypeDef* hadc)
     /* Note: On this device, there is no ADC error code fields related to     */
     /*       conversions on group injected only. In case of conversion on     */
     /*       going on group regular, no error code is reset.                  */
-    if (HAL_IS_BIT_CLR(hadc->State, HAL_ADC_STATE_REG_BUSY))
-    {
-      /* Reset ADC all error code fields */
-      ADC_CLEAR_ERRORCODE(hadc);
-    }
+		if (HAL_IS_BIT_CLR(hadc->State, HAL_ADC_STATE_REG_BUSY))
+		{
+		  /* Reset ADC all error code fields */
+		  ADC_CLEAR_ERRORCODE(hadc);
+		}
     
     /* Process unlocked */
     /* Unlock before starting ADC conversions: in case of potential           */
